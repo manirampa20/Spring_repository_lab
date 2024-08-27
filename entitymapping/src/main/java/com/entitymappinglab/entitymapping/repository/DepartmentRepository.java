@@ -21,13 +21,7 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> {
     List<Department> findByDepNameContainingIgnoreCase(String keyword);
 
     // Count the number of departments in a specific building
-    long countByBuilding(String building);
 
-    // Check if a department exists with a given name
-    boolean existsByDepName(String depName);
-
-    // Delete departments by building name
-    void deleteByBuilding(String building);
 
     // Find departments by building and department name
     List<Department> findByBuildingAndDepName(String building, String depName);
